@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Next Future</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">SOBRE NÓS</a></li>
+                <li><a href="#partners">PARCEIROS</a></li>
+                <li><a href="#contact">FALE CONOSCO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main">
+        <video autoplay muted loop class="video-background">
+            <source src="assets/back.mp4" type="video/mp4">
+        </video>
+        <div class="text">
+            <p>NEXT FUTURE</p>
+            <div class="typing-container">
+                    <h1 id="typed-text"></h1>
+            </div>
+        </div>
+        <div class="slider">
+            <button class="slider--btn slider--btn__prev">
+              <img src="assets/previous.png" alt="Previous" />
+            </button>
+          
+            <div class="slides__wrapper">
+              <div class="slides">
+                <!-- slide 1 -->
+                <div class="slide" data-current>
+                  <div class="slide__inner">
+                    <div class="slide--image__wrapper">
+                      <img class="slide--image" src="assets/img1.jpg" alt="Image 1" />
+                    </div>
+                  </div>
+                </div>
+                
+          
+                <!-- slide 2 -->
+                <div class="slide" data-next>
+                  <div class="slide__inner">
+                    <div class="slide--image__wrapper">
+                      <img class="slide--image" src="assets/img2.jpg" alt="Image 2" />
+                    </div>
+                  </div>
+                </div>
+            
+          
+                <!-- slide 3 -->
+                <div class="slide" data-previous>
+                  <div class="slide__inner">
+                    <div class="slide--image__wrapper">
+                      <img class="slide--image" src="assets/img3.jpg" alt="Image 3" />
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="slides--infos">
+                <!-- Slide Info 1 -->
+                <div class="slide-info" data-current>
+                  <div class="slide-info__inner">
+                    <div class="slide-info--text__wrapper">
+                      <div data-title class="slide-info--text">
+                        <span>Missão</span>
+                      </div>
+                      <div data-subtitle class="slide-info--text">
+                        <span>Conexão</span>
+                      </div>
+                      <div data-description class="slide-info--text">
+                        <span>Construir um futuro mais conectado e eficiente,</span> <span>onde a tecnologia atua como uma ponte entre</span>
+                        <span>o potencial humano e as inovações disruptivas.</span>
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Slide Info 2 -->
+                <div class="slide-info" data-next>
+                  <div class="slide-info__inner">
+                    <div class="slide-info--text__wrapper">
+                      <div data-title class="slide-info--text">
+                        <span>Valores</span>
+                      </div>
+                      <div data-subtitle class="slide-info--text">
+                        <span>Compromisso</span>
+                      </div>
+                      <div data-description class="slide-info--text">
+                        <span><strong>Inovação:</strong> soluções que </span><span> antecipam as necessidades do futuro.</span>
+                        <span><strong>Colaboração:</strong>diversidade de pensamento</span> <span> fortalece nossos projetos</span>
+                        <span><strong>Excelência:</strong>atenção aos detalhes</span> <span>e foco nos melhores resultados</span>
+                        <span><strong>Ética:</strong>transparência e integridade</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Slide Info 3 -->
+                <div class="slide-info" data-previous>
+                  <div class="slide-info__inner">
+                    <div class="slide-info--text__wrapper">
+                      <div data-title class="slide-info--text">
+                        <span>Legado</span>
+                      </div>
+                      <div data-subtitle class="slide-info--text">
+                       <span>Next Generation</span>
+                      </div>
+                      <div data-description class="slide-info--text">
+                        <span> Contruir um impacto que transcenda gerações</span>
+                        <span>promovendo mudanças positivas e inspirando a </span>
+                        <span>próxima era de inovação e sustentabilidade</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <button class="slider--btn slider--btn__next">
+              <img src="assets/next.png" alt="Next" />
+            </button>
+          </div>
+    </section>
+    <section class="sobre" id="about">
+        <h1>DREAM TEAM <br><span>clique e saiba mais!</span></h1>
+        <section class="team-section">
+            <div class="team-member">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/mat.png" alt="Membro 1">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Suporte</p>
+                            <a href="https://www.linkedin.com/in/usuario1" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="member-name">Mateus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/viter.jpeg" alt="Membro 2">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Dev IoT</p>
+                            <a href="https://www.linkedin.com/in/usuario1" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="member-name">Vitor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="team-member">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/lana.png" alt="Membro 3">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Líder e Designer</p>
+                            <a href="https://www.linkedin.com/in/usuario1" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="member-name">Lana</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="team-member">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/muri2.png" alt="Membro 4">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Dev Front-end</p>
+                            <a href="https://www.linkedin.com/in/usuario1" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="member-name">Murilo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="team-member">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/gg.png" alt="Membro 5">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Dev Back-end</p>
+                            <a href="https://www.linkedin.com/in/usuario1" target="_blank" class="linkedin-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <div class="member-name">Gêronimo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
