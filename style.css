@@ -25,6 +25,11 @@ header {
     justify-content: end;
 }
 
+header a{
+  text-decoration: none;
+  color: #fff;
+}
+
 nav {
     width: 45%;
 }
@@ -42,10 +47,7 @@ nav ul li {
     color: white;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
+
 
 .main {
     min-height: 100vh; 
@@ -324,159 +326,231 @@ a{
   display: flex;
 }
 
+.nos {
+  position: relative; /* Ajustado para que o elemento sobre não cause problemas */
+  width: 100%;
+  height: 100vh; /* Garante que a seção tenha a altura total da tela */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.product-card {
+  width: 892px;
+  height: auto;
+  position: relative; /* Mudando para relative para permitir ajuste fluido com flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-left {
+  width: 480px;
+  height: 553px;
+  background: #755fc2;
+  border-radius: 23px;
+  display: flex;
+  margin-left: -500px;
+  align-items: center;
+}
+
+.brand-image {
+  width: 550px;
+  opacity: 0.5;
+  transform: rotate(-90deg) scale(1.2);
+  margin-left: -110px;
+}
+
+.card-right {
+  width: 654px;
+  height: 479px;
+  background: rgba(255, 255, 255, 0.342);
+  position: absolute;
+  left: -10%;
+  transform: translateX(50%);
+  border-radius: 23px;
+  backdrop-filter: blur(10px);
+}
+
+.product-helmet {
+  width: 120%;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.product-details {
+  width: 300px;
+  height: 300px;
+  margin: 50px 0 0 235px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.product-details h1 {
+  font-weight: 800;
+  line-height: 46px;
+  font-family: monospace;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.product-details p{
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  color: #3a13c6;
+}
 
   .container {
     position: relative;
     margin: 0 20px;
 }
 
-.container .card {
-    position: relative;
-    width: 210px;
-    height: 300px;
-    background: black;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer; /* Adicionando um cursor pointer para indicar que o card é clicável */
-}
-
-.container .card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #06143a;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-
-.container .card.active:before {
-    clip-path: circle(300px at 80% -20%);
-}
-
-.container .card:after {
-    content: 'Next';
-    position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 8em;
-    font-weight: 800;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.04);
-}
-
-.container .card .imgBx {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-
-.container .card.active .imgBx {
-    top: 0;
-    transform: translateY(0%);
-}
-
-.container .card .imgBx img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120px;
-    border-radius: 50%;
-}
-
-.container .card .contentBx {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 10;
-}
-
-.container .card.active .contentBx {
-    height: 210px; /* Aumenta a altura do conteúdo quando ativo */
-}
-
-.container .card .contentBx h2 {
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-}
-
-.container .card .contentBx .size, 
-.container .card .contentBx .color {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;
-    opacity: 0; /* Oculta o tamanho e cor inicialmente */
-    visibility: hidden; /* Oculta o tamanho e cor inicialmente */
-}
-
-.container .card.active .contentBx .size {
-    opacity: 1; /* Torna o tamanho visível */
-    visibility: visible; /* Torna o tamanho visível */
-    transition-delay: 0.5s;
-}
-
-.container .card.active .contentBx .color {
-    opacity: 1; /* Torna a cor visível */
-    visibility: visible; /* Torna a cor visível */
-    transition-delay: 0.6s;
-}
-
-.container .card .contentBx .size h3, 
-.container .card .contentBx .color h3 {
-    color: #FFFFFF;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
-}
-
-.container .card .contentBx .size span {
-    width: 31px;
-    height: 31px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111111;
-    background: #FFFFFF;
-    margin: 0 5px;
-    transition: 0.5s;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.container .card .contentBx .size img {
-
-  margin-top: 5%;
-}
-  
-  .image {
-    width: 320px;
+    .container .card {
+      position: relative;
+      width: 210px;
+      height: 330px;
+      background: rgba(56, 49, 49, 0.267);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer; /* Adicionando um cursor pointer para indicar que o card é clicável */
   }
+  
+  .container .card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #755fc2;
+      clip-path: circle(150px at 80% 20%);
+      transition: 0.5s ease-in-out;
+  }
+  
+  .container .card.active:before {
+      clip-path: circle(300px at 80% -20%);
+  }
+  
+  .container .card:after {
+      content: 'Next';
+      position: absolute;
+      top: 30%;
+      left: -20%;
+      font-size: 10em;
+      font-weight: 800;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.04);
+  }
+  
+  .container .card .imgBx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10000;
+      width: 100%;
+      height: 220px;
+      transition: 0.5s;
+  }
+  
+  .container .card.active .imgBx {
+      top: 0;
+      transform: translateY(0%);
+  }
+  
+  .container .card .imgBx img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      border-radius: 50%;
+  }
+  
+  .container .card .contentBx {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      transition: 1s;
+      z-index: 10;
+  }
+  
+  .container .card.active .contentBx {
+      height: 210px; /* Aumenta a altura do conteúdo quando ativo */
+  }
+  
+  .container .card .contentBx h2 {
+      position: relative;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+  }
+  
+  .container .card .contentBx .size,
+  .container .card .contentBx .color {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 20px;
+      transition: 0.5s;
+      opacity: 0; /* Oculta o tamanho e cor inicialmente */
+      visibility: hidden; /* Oculta o tamanho e cor inicialmente */
+  }
+  
+  .container .card.active .contentBx .size {
+      opacity: 1; /* Torna o tamanho visível */
+      visibility: visible; /* Torna o tamanho visível */
+      transition-delay: 0.5s;
+  }
+  
+  .container .card.active .contentBx .color {
+      opacity: 1; /* Torna a cor visível */
+      visibility: visible; /* Torna a cor visível */
+      transition-delay: 0.6s;
+  }
+  
+  .container .card .contentBx .size h3,
+  .container .card .contentBx .color h3 {
+      color: #FFFFFF;
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-right: 10px;
+  }
+  
+  .container .card .contentBx .size span {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 26px;
+      font-size: 14px;
+      display: inline-block;
+      color: #111111;
+      margin: 0 5px;
+      transition: 0.5s;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  .container .card .contentBx a {
+      pointer-events: auto; /* Garante que os links possam ser clicados */
+      display: inline-block; /* Para que os links sejam tratados como elementos de bloco */
+  }
+  
 
 
 
-
-/* .footer {
+footer {
     position: relative; 
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20vh; 
+    height: 30vh; 
     background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.879), rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0)); 
     color: #fff; 
     display: flex;
@@ -484,11 +558,31 @@ a{
     text-align: center;
 }
 
-.footer-content p {
+footer p {
     margin-left: 3%;
     font-weight: 800;
-    width: 50%;
-} */
+    width: 14%;
+}
+
+
+.line{
+  height: 40%;
+  width: 2px;
+  background-color: white;
+}
+
+.texto-info{
+  font-size: 10px;
+  font-style: italic;
+}
+
+.icons{
+  margin-left: 50%;
+}
+
+.icons img{
+  width: 25px;
+}
 
 @keyframes caret-blink {
     50% {
@@ -591,7 +685,6 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #2d3b62;
     clip-path: circle(80px at 80% 20%);
     
 }
@@ -611,8 +704,8 @@ font-size: medium;
 }
 
 .container .card .contentBx .size span {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .container .card .contentBx .size span img {
@@ -621,6 +714,99 @@ font-size: medium;
 }
 
 
+
+.card-left {
+  width: 250px;
+  height: 280px;
+  background: #755fc2;
+  border-radius: 23px;
+  display: flex;
+  margin-left: -300px;
+  align-items: center;
+}
+
+.brand-image {
+  width: 250px;
+  opacity: 0.5;
+  transform: rotate(-90deg) scale(1.2);
+  margin-left: 10px;
+}
+
+.card-right {
+  width: 350px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.342);
+  position: absolute;
+  left: 19%;
+  transform: translateX(50%);
+  border-radius: 23px;
+  backdrop-filter: blur(10px);
+}
+
+.product-helmet {
+    display: none;
+}
+
+.product-details {
+  width: 285px;
+  height: 300px;
+  margin: 4px 0 0 8px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.product-details h1 {
+  font-weight: 800;
+  line-height: 46px;
+  font-family: monospace;
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+.product-details p{
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  color: #3a13c6;
+}
+footer {
+  position: relative; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh; 
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.879), rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0)); 
+  color: #fff; 
+  display: flex;
+  align-items: center; 
+  text-align: center;
+}
+
+footer p {
+  margin-left: 3%;
+  font-weight: 800;
+  width: 50%;
+  font-size: 10px;
+}
+
+
+.line{
+height: 30%;
+width: 2px;
+background-color: white;
+}
+
+.texto-info{
+font-size: 10px;
+font-style: italic;
+}
+
+.icons{
+margin-left: 10%;
+}
+
+.icons img{
+width: 20px;
+}
 
 
 }

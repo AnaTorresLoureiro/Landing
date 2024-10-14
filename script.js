@@ -78,9 +78,5 @@ prevBtn.addEventListener('click', () => {
 updateSlides();
 
 function toggleContent(card) {
-  card.classList.toggle('active');
-}
-
-function toggleContent(card) {
   card.classList.toggle('active'); // Alterna a classe 'active' no card
 }
