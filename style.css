@@ -364,7 +364,7 @@ nav ul li {
 .card-right {
   width: 600px;
   height: 479px;
-  background: rgba(255, 255, 255, 0.342);
+  background: rgba(56, 49, 49, 0.267);
   position: absolute;
   left: -10%;
   transform: translateX(50%);
@@ -392,7 +392,7 @@ nav ul li {
 .product-details p{
   font-family: "Space Mono", monospace;
   font-size: 12px;
-  color: #3a13c6;
+  color: #ffffff;
 }
 
   .container {
@@ -534,9 +534,99 @@ nav ul li {
       pointer-events: auto; /* Garante que os links possam ser clicados */
       display: inline-block; /* Para que os links sejam tratados como elementos de bloco */
   }
+
+  .projeto{
+    min-width: 80vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15%;
+  }
   
+  .product-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    height: 450px;
+    background: rgba(56, 49, 49, 0.267);
+    backdrop-filter: blur(10px);
+    margin: 20px;
+}
 
+.product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: .3s linear;
+}
 
+.product-image img {
+    width: 100%; /* Faz com que a imagem cubra toda a largura */
+    height: 100%; /* Faz com que a imagem cubra toda a altura */
+  
+}
+
+ .detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.detalhes h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1em;
+    color: #ffffff;
+}
+
+.detalhes h2 span {
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0f082c;
+}
+
+.detalhes p {
+    max-width: 85%;
+    margin-left: 15%;
+    color: #ffffff;
+    font-size: 10px;
+    margin-bottom: 36px;
+}
+
+.parca img{
+  width: 60%;
+}
+
+.ad{
+  display: flex;
+}
+
+.ad button{
+  margin-top: 15%;
+  margin-left: 15%;
+  height: 30px;
+  width: 80px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #755fc2;
+}
+
+.ad button a{
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Space mono", monospace;
+}
 
 footer {
     position: relative; 
@@ -797,6 +887,75 @@ margin-left: 10%;
 .icons img{
 width: 20px;
 }
+
+.product-wrapper {
+  position: relative;
+  display: grid;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 300px;
+  height: 700px;
+  background: rgba(56, 49, 49, 0.267);
+  backdrop-filter: blur(10px);
+  margin-top: 20%;
+  margin-left: -20%;
+}
+
+.product-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: .3s linear;
+}
+
+.product-image img {
+  width: 100%; /* Faz com que a imagem cubra toda a largura */
+  height: 100%; /* Faz com que a imagem cubra toda a altura */
+
+}
+
+.detalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: content-box;
+  padding: 0px;
+  margin-left: 30%;
+}
+
+.detalhes h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.4em;
+  line-height: 1em;
+  color: #ffffff;
+}
+
+.detalhes h2 span {
+  font-size: 0.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0f082c;
+}
+
+.detalhes p {
+  width: 300px;
+  margin-left: 5%;
+  color: #ffffff;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.parca img{
+  width: 40%;
+}
+
+
 
 
 }
