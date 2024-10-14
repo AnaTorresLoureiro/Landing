@@ -6,6 +6,7 @@ body, html {
     height: 100%; 
     font-family: "Space Mono", monospace;
     overflow-x: hidden; 
+    scroll-behavior: smooth;
 }
 
 .video-background {
@@ -316,98 +317,159 @@ a{
     border-style: none;
     
   }
-  
-.sobre {
-    min-height: 50vh; 
-    width: 100%;
-    color: white;
+
+.sobre > .time{
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
 }
 
-.sobre h1{
-    margin-left: 2%;
-    font-size: 35px;
-}
 
-.sobre h1 span{
-    font-size: medium;
-}
-
-.team-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
-.member-name{
-    color: white;
-}
-
-.team-member {
-    text-align: center;
-    cursor: pointer; /* Indica que é clicável */
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 150px;
-    height: 150px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
+  .container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+    margin: 0 20px;
 }
 
-.flip-card-inner.flipped {
-    transform: rotateY(180deg); /* Aplica a rotação quando clicado */
+.container .card {
+    position: relative;
+    width: 210px;
+    height: 300px;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer; /* Adicionando um cursor pointer para indicar que o card é clicável */
 }
 
-.flip-card-front,
-.flip-card-back {
+.container .card:before {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* Faz as fotos ficarem redondas */
-    backface-visibility: hidden;
+    background: #06143a;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
 }
 
-.flip-card-front {
-    background-color: #f1f1f1; /* Cor de fundo da frente */
+.container .card.active:before {
+    clip-path: circle(300px at 80% -20%);
 }
 
-.flip-card-front img {
+.container .card:after {
+    content: 'Next';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 8em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
     width: 100%;
-    height: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card.active .imgBx {
+    top: 0;
+    transform: translateY(0%);
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
     border-radius: 50%;
 }
 
-.flip-card-back {
-    background-color: #0f011b; /* Cor de fundo de trás */
-    color: white;
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .card.active .contentBx {
+    height: 210px; /* Aumenta a altura do conteúdo quando ativo */
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.container .card .contentBx .size, 
+.container .card .contentBx .color {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotateY(180deg); /* Rotaciona para trás */
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0; /* Oculta o tamanho e cor inicialmente */
+    visibility: hidden; /* Oculta o tamanho e cor inicialmente */
 }
 
-.linkedin-link {
-    margin-top: 10px; /* Espaço acima do link */
-    color: white; /* Cor do LinkedIn */
-    text-decoration: none; /* Remove sublinhado */
-    font-size: 24px; /* Tamanho do ícone */
-    transition: transform 0.3s; /* Suaviza a transição */
+.container .card.active .contentBx .size {
+    opacity: 1; /* Torna o tamanho visível */
+    visibility: visible; /* Torna o tamanho visível */
+    transition-delay: 0.5s;
 }
 
-.linkedin-link:hover {
-    color: #0e76a8; /* Cor do LinkedIn */
-    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+.container .card.active .contentBx .color {
+    opacity: 1; /* Torna a cor visível */
+    visibility: visible; /* Torna a cor visível */
+    transition-delay: 0.6s;
 }
+
+.container .card .contentBx .size h3, 
+.container .card .contentBx .color h3 {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111111;
+    background: #FFFFFF;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .card .contentBx .size img {
+
+  margin-top: 5%;
+}
+  
+  .image {
+    width: 320px;
+  }
+
+
+
 
 /* .footer {
     position: relative; 
@@ -474,46 +536,9 @@ a{
         color: #0f011b;
     }
 
-    .sobre h1{
-        font-size: medium;
+    :root {
+      --slide-width: min(29vw, 600px);
     }
-
-    .sobre h1 span{
-        font-size: small;
-    }
-
-    .flip-card {
-
-        width: 130px;
-        height: 130px;
-    }
-    .member-name{
-        font-size: small;
-    }
-    .flip-card-back{
-        font-size: small;
-    }
-    .team-section {
-        display: grid;
-        
-    }
-    .team-member:nth-child(0){
-        grid-column: span 2;
-    }
-    .team-member:nth-child(3){
-        margin-left: 33%;
-        margin-bottom: 5%;
-        margin-top: 5%;
-    }
-
-    .team-member:nth-child(3) {
-        grid-column: span 2; 
-    }
-
-    .member-name{
-        font-size: small;
-    }
-    
 
     .slider {
         width: 90%;
@@ -528,6 +553,72 @@ a{
       .slide-info__inner {
         height: calc(60% - var(--padding));
       }
+
+      .carousel-container {
+        position: relative;
+        min-width: 50vw; /* Mantendo o tamanho do carrossel */
+        height: 400px;
+        overflow: hidden;
+        border-radius: 50%; /* Forma circular */
+        clip-path: inset(0 0 0 50%); /* Corta metade do carrossel */
+        left: -30%; /* Move o carrossel para a esquerda */
+    }
+
+    .sobre > .time{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+      grid-template-rows: auto auto auto;     /* Três linhas */
+      gap: 10px;              
+    }
+    .container:nth-child(3) {
+      grid-column: 1 / -1; /* O card do meio ocupa toda a linha */
+      justify-self: center; /* Centraliza o card */
+  }
+    
+    .container .card {
+      width: 150px;
+      height: 250px;
+  }
+
+  .container .card .imgBx img {
+    width: 100px;
+}
+    
+  .container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2d3b62;
+    clip-path: circle(80px at 80% 20%);
+    
+}
+
+.container .card.active .contentBx {
+  height: 150px; /* Aumenta a altura do conteúdo quando ativo */
+}
+
+.container .card .contentBx .size h3, 
+.container .card .contentBx .color h3 {
+    font-size: 8px;
+}
+
+.container .card .contentBx h2 {
+  margin-top: 20%;
+font-size: medium;
+}
+
+.container .card .contentBx .size span {
+  width: 25px;
+  height: 25px;
+}
+
+.container .card .contentBx .size span img {
+  width: 25px;
+  height: 25px;
+}
 
 
 

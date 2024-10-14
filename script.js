@@ -77,9 +77,10 @@ prevBtn.addEventListener('click', () => {
 // Initialize the slider
 updateSlides();
 
-document.querySelectorAll('.team-member').forEach(member => {
-    member.addEventListener('click', () => {
-        const cardInner = member.querySelector('.flip-card-inner');
-        cardInner.classList.toggle('flipped'); // Alterna a classe para fazer o flip
-    });
-});
+function toggleContent(card) {
+  card.classList.toggle('active');
+}
+
+function toggleContent(card) {
+  card.classList.toggle('active'); // Alterna a classe 'active' no card
+}
