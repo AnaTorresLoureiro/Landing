@@ -531,8 +531,8 @@ nav ul li {
   }
   
   .container .card .contentBx a {
-      pointer-events: auto; /* Garante que os links possam ser clicados */
-      display: inline-block; /* Para que os links sejam tratados como elementos de bloco */
+      pointer-events: auto; 
+      display: inline-block; 
   }
 
   .projeto{
@@ -677,7 +677,7 @@ footer p {
 @media (max-width: 480px) {
 
     .typing-container {
-        font-size: x-small;
+        font-size: small;
         color: white;
         white-space: nowrap; 
         overflow: hidden; 
@@ -775,7 +775,9 @@ footer p {
 .container .card.active .contentBx {
   height: 150px; /* Aumenta a altura do conteúdo quando ativo */
 }
-
+.container .card .imgBx {
+  z-index: 5;
+}
 .container .card .contentBx .size h3, 
 .container .card .contentBx .color h3 {
     font-size: 8px;
@@ -898,7 +900,7 @@ width: 20px;
   background: rgba(56, 49, 49, 0.267);
   backdrop-filter: blur(10px);
   margin-top: 20%;
-  margin-right: 30%;
+  margin-right: 50%;
 }
 
 .product-image {
