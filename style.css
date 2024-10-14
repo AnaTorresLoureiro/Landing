@@ -362,7 +362,7 @@ nav ul li {
 }
 
 .card-right {
-  width: 654px;
+  width: 600px;
   height: 479px;
   background: rgba(255, 255, 255, 0.342);
   position: absolute;
@@ -372,13 +372,6 @@ nav ul li {
   backdrop-filter: blur(10px);
 }
 
-.product-helmet {
-  width: 120%;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-}
 
 .product-details {
   width: 300px;
@@ -391,8 +384,8 @@ nav ul li {
 .product-details h1 {
   font-weight: 800;
   line-height: 46px;
-  font-family: monospace;
-  font-size: 40px;
+  font-family: "Space mono", monospace;
+  font-size: 45px;
   margin-bottom: 15px;
 }
 
@@ -743,9 +736,6 @@ font-size: medium;
   backdrop-filter: blur(10px);
 }
 
-.product-helmet {
-    display: none;
-}
 
 .product-details {
   width: 285px;
