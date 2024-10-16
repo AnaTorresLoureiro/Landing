@@ -23,6 +23,8 @@ header {
     min-width: 100vw;
     display: flex;
     justify-content: end;
+    position: absolute;
+    z-index: 500;
 }
 
 header a{
