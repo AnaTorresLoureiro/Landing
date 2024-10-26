@@ -22,6 +22,8 @@ body, html {
 header {
     min-width: 100vw;
     display: flex;
+    position: absolute;
+    z-index: 500;
     justify-content: end;
     position: absolute;
     z-index: 500;
@@ -49,20 +51,16 @@ nav ul li {
     color: white;
 }
 
-
-
 .main {
     min-height: 100vh; 
-    justify-content: center; 
-    padding-left: 5%; 
+    justify-content: center;  
     position: relative; 
     display: flex;
-    float: left;
 }
 
 .text p {
-    font-size: 80px;
-    width: 30%;
+    font-size: 85px;
+    width: 50%;
     font-weight: 500;
     color: white;
 }
@@ -326,6 +324,7 @@ nav ul li {
   width: 100%;
   min-height: 80vh;
   display: flex;
+  justify-content: space-between;
 }
 
 .nos {
@@ -657,16 +656,16 @@ footer p {
 }
 
 .texto-info{
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
 }
 
 .icons{
-  margin-left: 50%;
+  margin-left: 55%;
 }
 
 .icons img{
-  width: 25px;
+  width: 30%;
 }
 
 @keyframes caret-blink {
@@ -889,7 +888,7 @@ margin-left: 10%;
 }
 
 .icons img{
-width: 20px;
+width: 30px;
 }
 
 .product-wrapper {
